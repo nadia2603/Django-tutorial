@@ -15,6 +15,7 @@ class Question(models.Model):
 # Charfield vereist dat je een parameter meegeeft 
 # DateTimeField voor datum-en tijdvelden 
 # question_text en pub_date zijn de namen van het veld 
+# datetime controleert hier of de vraag in de afgelopen uur is gemaakt
 
 class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
